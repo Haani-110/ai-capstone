@@ -13,8 +13,19 @@ This repository contains my AI-assisted development capstone assignment.
 
 Practice AI-assisted software development using modern development tools.
 
-## Installation
+## Getting Started
 
-1. Clone the repository.
-2. Open it in Cursor.
-3. Begin development.
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS)
+- [Git](https://git-scm.com/)
+- [Cursor](https://cursor.com/)
+
+### Setup
+
+```bash
+git clone https://github.com/Haani-110/ai-capstone.git
+cd ai-capstone
+```
+
+Open the project in Cursor and begin development.
