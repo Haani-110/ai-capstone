@@ -29,3 +29,23 @@ cd ai-capstone
 ```
 
 Open the project in Cursor and begin development.
+
+### Run the settings app
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to use the project settings form. Settings are validated on the client and server, then saved to `data/settings.json`.
+
+For development with auto-reload:
+
+```bash
+npm run dev
+```
+
+### Run tests
+
+```bash
+npm test
+```

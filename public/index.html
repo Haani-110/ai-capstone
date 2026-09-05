@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Settings</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Project Settings</h1>
+        <p>Configure your capstone development preferences.</p>
+      </header>
+
+      <form id="settings-form" novalidate>
+        <div class="field">
+          <label for="developerName">Developer name</label>
+          <p id="developerName-description" class="field-description">
+            Your display name (2–50 characters).
+          </p>
+          <input
+            id="developerName"
+            name="developerName"
+            type="text"
+            autocomplete="name"
+            required
+            minlength="2"
+            maxlength="50"
+            placeholder="Syed Haani Raza"
+            aria-describedby="developerName-description developerName-error"
+          />
+          <p id="developerName-error" class="error" data-error-for="developerName"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <p id="email-description" class="field-description">
+            Used for project notifications and account recovery.
+          </p>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+            placeholder="you@example.com"
+            aria-describedby="email-description email-error"
+          />
+          <p id="email-error" class="error" data-error-for="email"></p>
+        </div>
+
+        <div class="field">
+          <label for="editorTheme">Editor theme</label>
+          <p id="editorTheme-description" class="field-description">
+            Choose how the editor appears in your development environment.
+          </p>
+          <select
+            id="editorTheme"
+            name="editorTheme"
+            required
+            aria-describedby="editorTheme-description editorTheme-error"
+          >
+            <option value="">Select a theme</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="system">System</option>
+          </select>
+          <p id="editorTheme-error" class="error" data-error-for="editorTheme"></p>
+        </div>
+
+        <div class="field">
+          <label for="commitPrefix">Default commit prefix</label>
+          <p id="commitPrefix-description" class="field-description">
+            Optional Conventional Commits prefix applied to new commits.
+          </p>
+          <select
+            id="commitPrefix"
+            name="commitPrefix"
+            aria-describedby="commitPrefix-description commitPrefix-error"
+          >
+            <option value="">None</option>
+            <option value="feat">feat</option>
+            <option value="fix">fix</option>
+            <option value="docs">docs</option>
+            <option value="chore">chore</option>
+            <option value="refactor">refactor</option>
+            <option value="test">test</option>
+          </select>
+          <p id="commitPrefix-error" class="error" data-error-for="commitPrefix"></p>
+        </div>
+
+        <div class="field field--checkbox">
+          <label for="enableAiSuggestions">
+            <input
+              id="enableAiSuggestions"
+              name="enableAiSuggestions"
+              type="checkbox"
+              aria-describedby="enableAiSuggestions-description enableAiSuggestions-error"
+            />
+            Enable AI suggestions
+          </label>
+          <p id="enableAiSuggestions-description" class="field-description">
+            Show inline AI-assisted suggestions while editing code.
+          </p>
+          <p id="enableAiSuggestions-error" class="error" data-error-for="enableAiSuggestions"></p>
+        </div>
+
+        <div class="actions">
+          <button type="submit" id="submit-button">Save settings</button>
+        </div>
+
+        <p id="form-status" role="status" aria-live="polite"></p>
+        <p id="form-errors" class="sr-only" role="alert" aria-live="assertive"></p>
+      </form>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
